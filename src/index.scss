@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: 'Roboto Slab', serif;
+  --font-raleway: 'Raleway', sans-serif;
+}
+
+body {
+  font-family: var(--font-roboto);
+  background-color: #212426;
+}
