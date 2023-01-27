@@ -12,19 +12,16 @@ import { useAnimeStore } from '/@/store';
 export const useGetAnimeDetails = (opts: ISearch) => {
   const animeService = ApiService.createInstance();
   const setAnime = useAnimeStore(state => state.setAnime);
-  const setIsLoading = useAnimeStore(state => state.setIsLoading);
 
   return useQuery(
-    ['anime', opts.name],
+    ['anime', opts.name, opts.limit],
     async () => {
-      setIsLoading(true);
       const response: AxiosResponse = await animeService.getAnimeDetails(opts);
       return response.data.data;
     },
     {
       onSuccess: data => {
         setAnime(data);
-        setIsLoading(false);
       },
       retry: false,
     },

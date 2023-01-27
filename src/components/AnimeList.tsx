@@ -1,11 +1,11 @@
-import { useGetAnimeDetails } from '../services/queries/query';
+import { useIsFetching } from 'react-query';
 import { AnimeCard } from '/@/components';
 import { IAnime } from '/@/interfaces';
 import { useAnimeStore } from '/@/store';
 
 export const AnimeList = () => {
   const animes = useAnimeStore(state => state.animes);
-  const isLoading = useAnimeStore(state => state.isLoading);
+  const isLoading = useIsFetching()
 
   return (
     <div className="container">
