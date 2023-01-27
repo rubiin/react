@@ -1,17 +1,11 @@
-export interface IAnime {
-  mal_id: string;
-  title: string;
-  url: string;
-  images: Record<'jpg' | 'webp', any>;
-  status: string;
-}
+import { IAnime } from '../interfaces';
 
 export const AnimeCard = (props: { anime: IAnime }) => {
-  const { url, mal_id, status, title, images } = props.anime;
+  const { url, status, title, images } = props.anime;
   return (
     <div className="anime">
       <div>
-        <p>{url}</p>
+        <h2>{title}</h2>
       </div>
       <div>
         <img
@@ -21,6 +15,7 @@ export const AnimeCard = (props: { anime: IAnime }) => {
               : 'https://via.placeholder.com/400'
           }
           alt={title}
+          loading="lazy"
         />
       </div>
       <div>

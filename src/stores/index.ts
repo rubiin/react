@@ -1,2 +1,1 @@
-export * from './bear.store';
-export * from './fish.store';
+export * from './anime.store';
