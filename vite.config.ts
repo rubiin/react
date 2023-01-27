@@ -60,6 +60,7 @@ export default defineConfig(({ mode }) => {
         'react',
         'react-router-dom',
         'zustand',
+        'axios',
         'react-hook-form',
         'react-dom',
       ],
@@ -76,7 +77,7 @@ export default defineConfig(({ mode }) => {
         '/@/interfaces': path.resolve(__dirname, '/src/interfaces/index'),
         '/@/store': path.resolve(__dirname, '/src/stores/index'),
         '/@/axios': path.resolve(__dirname, '/src/http/axios'),
-         "/@/scss": path.resolve(__dirname, "src/resources/scss"),
+        '/@/scss': path.resolve(__dirname, 'src/resources/scss'),
       },
     },
     build: {
@@ -93,6 +94,7 @@ export default defineConfig(({ mode }) => {
                 'zustand',
                 'react-hook-form',
                 'react-dom',
+                'axios'
               ];
               const chunk = modules.find(module =>
                 id.includes(`/node_modules/${module}`),
@@ -117,6 +119,7 @@ export default defineConfig(({ mode }) => {
         'zustand',
         'react-hook-form',
         'react-dom',
+        'axios',
       ],
     },
   };

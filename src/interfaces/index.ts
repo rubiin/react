@@ -12,3 +12,10 @@ export interface IFetch {
   page?: number;
   sort?: string;
 }
+
+export interface ISearch {
+  name?: string;
+  page?: number;
+  limit?: number;
+  sort?: string;
+}

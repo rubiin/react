@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { useAnimeStore } from '/@/store';
 
 import SearchIcon from '../resources/images/search.svg';
+import { useGetAnimeDetails } from '../services/queries/query';
 
 export const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const fetchAnime = useAnimeStore(state => state.fetch);
+  useGetAnimeDetails({ name: searchTerm || 'naruto' });
+
   return (
     <div className="search">
       <input
@@ -14,7 +15,7 @@ export const Search = () => {
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
       />
-      <img src={SearchIcon} onClick={() => fetchAnime({ name: searchTerm })} />
+      <img src={SearchIcon} />
     </div>
   );
 };

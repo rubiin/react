@@ -1,24 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useGetAnimeDetails } from '../services/queries/query';
+import { AnimeCard } from '/@/components';
 import { IAnime } from '/@/interfaces';
 import { useAnimeStore } from '/@/store';
-import { AnimeCard } from '/@/components';
 
 export const AnimeList = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const fetchAnime = useAnimeStore(state => state.fetch);
   const animes = useAnimeStore(state => state.animes);
-
-  const searchMovie = async (name: string) => {
-    setIsLoading(true);
-    fetchAnime({ name });
-    setIsLoading(false);
-  };
-
-  // on mount hook
-
-  useEffect(() => {
-    searchMovie('naruto');
-  }, []);
+  const isLoading = useAnimeStore(state => state.isLoading);
 
   return (
     <div className="container">

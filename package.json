@@ -7,7 +7,7 @@
     "dev": "vite --open --host --mode dev",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "format": "prettier . --write",
+    "format": "prettier --write --cache \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "serve dist -l 4000"
   },
   "dependencies": {

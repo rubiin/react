@@ -23,7 +23,7 @@
       "/@/store": ["./src/stores/index"],
       "/@/utils": ["./src/utils/index"],
       "/@/hooks": ["./src/hooks/index"],
-      "/@/scss": ["./src/resources/scss"],
+      "/@/scss": ["./src/resources/scss"]
     }
   },
   "include": ["src"],
