@@ -76,6 +76,7 @@ export default defineConfig(({ mode }) => {
         '/@/interfaces': path.resolve(__dirname, '/src/interfaces/index'),
         '/@/store': path.resolve(__dirname, '/src/stores/index'),
         '/@/axios': path.resolve(__dirname, '/src/http/axios'),
+         "/@/scss": path.resolve(__dirname, "src/resources/scss"),
       },
     },
     build: {
