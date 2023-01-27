@@ -72,7 +72,10 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '/@': path.resolve(__dirname, './src'),
+        '/@/components': path.resolve(__dirname, '/src/components/index'),
+        '/@/interfaces': path.resolve(__dirname, '/src/interfaces/index'),
+        '/@/store': path.resolve(__dirname, '/src/stores/index'),
+        '/@/axios': path.resolve(__dirname, '/src/http/axios'),
       },
     },
     build: {

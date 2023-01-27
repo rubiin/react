@@ -1,11 +1,12 @@
 import { create } from 'zustand';
 import { IAnime, IFetch } from '../interfaces';
-import axios from '/@/http/axios';
+import axios from '/@/axios';
 
 interface AnimeState {
   animes: IAnime[];
-  fetch: ({ name, limit = 8 }: IFetch) => Promise<void>;
+  fetch: (opts: IFetch) => Promise<void>;
 }
+
 
 const API_URL = 'https://api.jikan.moe/v4/anime?q=naruto';
 

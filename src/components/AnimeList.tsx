@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IAnime } from '../interfaces';
-import { useAnimeStore } from '../stores';
-import { AnimeCard } from '/@/components/AnimeCard';
+import { IAnime } from '/@/interfaces';
+import { useAnimeStore } from '/@/store';
+import { AnimeCard } from '/@/components';
 
 export const AnimeList = () => {
   const [isLoading, setIsLoading] = useState(true);

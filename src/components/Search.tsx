@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { useAnimeStore } from '../stores';
+import { useAnimeStore } from '/@/store';
 
-import SearchIcon from '../assets/search.svg';
+import SearchIcon from '../resources/images/search.svg';
 
 export const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');

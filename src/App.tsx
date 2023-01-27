@@ -1,4 +1,4 @@
-import './App.scss';
+import './resources/css/App.scss';
 import { AnimeList, Header, Search } from './components';
 
 function App() {
