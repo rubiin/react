@@ -10,7 +10,7 @@ export const AnimeCard = (props: { anime: IAnime }) => {
       <div>
         <img
           src={
-            images.jpg?.image_url
+            images?.jpg?.image_url
               ? images.jpg?.image_url
               : 'https://via.placeholder.com/400'
           }

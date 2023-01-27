@@ -1,24 +1,34 @@
 import { create } from 'zustand';
 import { IAnime, IFetch } from '../interfaces';
-import axios from '/@/axios';
+import { devtools, persist } from 'zustand/middleware';
 
 interface AnimeState {
   animes: IAnime[];
-  fetch: (opts: IFetch) => Promise<void>;
+  isLoading: boolean;
+  setAnime: (anime: IAnime) => void;
+  setIsLoading: (isLoading: boolean) => void;
 }
 
-
-const API_URL = 'https://api.jikan.moe/v4/anime?q=naruto';
-
-export const useAnimeStore = create<AnimeState>()((set, get) => ({
-  animes: [],
-  fetch: async ({ name, limit = 8 }: IFetch) => {
-    const { data } = await axios.get(
-      `${API_URL}/search/anime?q=${name}&limit=${limit}`,
-    );
-    set({ animes: data.data });
-  },
-  getById: (id: number) => {
-    return get().animes.find(anime => anime.mal_id === id);
-  },
-}));
+export const useAnimeStore = create<AnimeState>()(
+  devtools(
+    persist(
+      (set, get) => ({
+        animes: [],
+        isLoading: true,
+        setAnime: anime =>
+          set(state => {
+            if (Array.isArray(anime)) {
+              return { animes: [...anime] };
+            }
+            return { animes: state.animes.concat(anime) };
+          }),
+        setIsLoading: isLoading => set(() => ({ isLoading })),
+        getById: (id: number) =>
+          get().animes.find(anime => anime.mal_id === id),
+      }),
+      {
+        name: 'anime-store',
+      },
+    ),
+  ),
+);

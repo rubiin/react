@@ -20,7 +20,10 @@
       "/@/components": ["./src/components/index"],
       "/@/interfaces": ["./src/interfaces/index"],
       "/@/axios": ["./src/http/axios"],
-      "/@/store": ["./src/stores/index"]
+      "/@/store": ["./src/stores/index"],
+      "/@/utils": ["./src/utils/index"],
+      "/@/hooks": ["./src/hooks/index"],
+      "/@/scss": ["./src/resources/scss"]
     }
   },
   "include": ["src"],
