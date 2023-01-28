@@ -85,12 +85,21 @@ a:hover {
 .container {
   width: 100%;
   margin-top: var(--mb-3);
+}
 
+.flex{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
 
 .anime {
   width: 310px;
@@ -111,7 +120,6 @@ a:hover {
     width: 100%;
     opacity: 0;
     top: 0;
-    color: var(--first-color);
   }
 
   div:nth-of-type(2) {
@@ -128,6 +136,7 @@ a:hover {
     z-index: 2;
     background-color: #343739;
     padding: 16px 24px 24px 24px;
+
 
     position: absolute;
     bottom: 0;

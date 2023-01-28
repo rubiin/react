@@ -1,4 +1,4 @@
-import { IAnime } from '../interfaces';
+import { IAnime } from '@types';
 
 export const AnimeCard = (props: { anime: IAnime }) => {
   const { url, status, title, images } = props.anime;

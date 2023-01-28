@@ -1,8 +1,7 @@
 import { useQuery } from 'react-query';
-import { AxiosResponse } from 'axios';
 import { ApiService } from '../api-service';
-import { ISearch } from '/@/interfaces';
-import { useAnimeStore } from '/@/store';
+import { ISearch } from '@types';
+import { useAnimeStore } from '@store';
 
 /**
  *
@@ -16,7 +15,7 @@ export const useGetAnimeDetails = (opts: ISearch) => {
   return useQuery(
     ['anime', opts.name, opts.limit],
     async () => {
-      const response: AxiosResponse = await animeService.getAnimeDetails(opts);
+      const response = await animeService.getAnimeDetails(opts);
       return response.data.data;
     },
     {

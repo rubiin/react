@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import { VitePluginFonts } from 'vite-plugin-fonts';
 import ViteVisualizer from 'rollup-plugin-visualizer';
 import strip from '@rollup/plugin-strip';
-import path from 'path';
+import path from 'node:path';
 import viteCompression from 'vite-plugin-compression';
 import react from '@vitejs/plugin-react-swc';
 import { createHtmlPlugin } from 'vite-plugin-html';
@@ -60,7 +60,8 @@ export default defineConfig(({ mode }) => {
         'react',
         'react-router-dom',
         'zustand',
-        'axios',
+        'react-query',
+        'redaxios',
         'react-hook-form',
         'react-dom',
       ],
@@ -73,11 +74,12 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '/@/components': path.resolve(__dirname, '/src/components/index'),
-        '/@/interfaces': path.resolve(__dirname, '/src/interfaces/index'),
-        '/@/store': path.resolve(__dirname, '/src/stores/index'),
-        '/@/axios': path.resolve(__dirname, '/src/http/axios'),
-        '/@/scss': path.resolve(__dirname, 'src/resources/scss'),
+        '@components': path.resolve(__dirname, '/src/components/index'),
+        '@types': path.resolve(__dirname, '/src/types'),
+        '@store': path.resolve(__dirname, '/src/stores/index'),
+        '@redaxios': path.resolve(__dirname, '/src/http/redaxios'),
+        '@scss': path.resolve(__dirname, 'src/resources/scss'),
+        '@services': path.resolve(__dirname, 'src/services'),
       },
     },
     build: {
@@ -94,7 +96,8 @@ export default defineConfig(({ mode }) => {
                 'zustand',
                 'react-hook-form',
                 'react-dom',
-                'axios'
+                'react-query',
+                'redaxios'
               ];
               const chunk = modules.find(module =>
                 id.includes(`/node_modules/${module}`),
@@ -119,7 +122,8 @@ export default defineConfig(({ mode }) => {
         'zustand',
         'react-hook-form',
         'react-dom',
-        'axios',
+        'react-query',
+        'redaxios',
       ],
     },
   };

@@ -1,4 +1,4 @@
-import '/@/scss/App.scss';
+import '@scss/App.scss';
 import { AnimeList, Header, Search } from './components';
 import { QueryClient, QueryClientProvider } from 'react-query';
 

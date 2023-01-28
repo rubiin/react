@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from 'redaxios';
 const API_URL = 'https://api.jikan.moe/v4/';
 
 const axiosInstance = axios.create({
@@ -6,7 +6,6 @@ const axiosInstance = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  maxRedirects: 5,
 });
 
 export default axiosInstance;

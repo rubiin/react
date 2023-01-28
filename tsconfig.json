@@ -17,13 +17,14 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "paths": {
-      "/@/components": ["./src/components/index"],
-      "/@/interfaces": ["./src/interfaces/index"],
-      "/@/axios": ["./src/http/axios"],
-      "/@/store": ["./src/stores/index"],
-      "/@/utils": ["./src/utils/index"],
-      "/@/hooks": ["./src/hooks/index"],
-      "/@/scss": ["./src/resources/scss"]
+      "@components": ["./src/components/index"],
+      "@types": ["./src/types"],
+      "@axios": ["./src/http/axios"],
+      "@store": ["./src/stores/index"],
+      "@utils": ["./src/utils/index"],
+      "@hooks": ["./src/hooks/index"],
+      "@scss": ["./src/resources/scss"],
+      "@services": ["./src/services"]
     }
   },
   "include": ["src"],
