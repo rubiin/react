@@ -19,11 +19,11 @@
     "paths": {
       "@components": ["./src/components/index"],
       "@types": ["./src/types"],
-      "@axios": ["./src/http/axios"],
       "@store": ["./src/stores/index"],
       "@utils": ["./src/utils/index"],
       "@hooks": ["./src/hooks/index"],
       "@scss": ["./src/resources/scss"],
+      "@images": ["./src/resources/images"],
       "@services": ["./src/services"]
     }
   },

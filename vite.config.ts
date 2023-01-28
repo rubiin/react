@@ -77,8 +77,10 @@ export default defineConfig(({ mode }) => {
         '@components': path.resolve(__dirname, '/src/components/index'),
         '@types': path.resolve(__dirname, '/src/types'),
         '@store': path.resolve(__dirname, '/src/stores/index'),
-        '@redaxios': path.resolve(__dirname, '/src/http/redaxios'),
+        '@utils': path.resolve(__dirname, '/src/utils/index'),
+        '@hooks': path.resolve(__dirname, '/src/hooks'),
         '@scss': path.resolve(__dirname, 'src/resources/scss'),
+        '@images': path.resolve(__dirname, 'src/resources/images'),
         '@services': path.resolve(__dirname, 'src/services'),
       },
     },
@@ -86,27 +88,6 @@ export default defineConfig(({ mode }) => {
       minify: true,
       chunkSizeWarningLimit: 1024,
       sourcemap: false,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('/node_modules/')) {
-              const modules = [
-                'react',
-                'react-router-dom',
-                'zustand',
-                'react-hook-form',
-                'react-dom',
-                'react-query',
-                'redaxios'
-              ];
-              const chunk = modules.find(module =>
-                id.includes(`/node_modules/${module}`),
-              );
-              return chunk ? `vendor-${chunk}` : 'vendor';
-            }
-          },
-        },
-      },
     },
     base: process.env.VITE_APP_BASE,
     plugins: plugin,

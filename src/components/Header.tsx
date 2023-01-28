@@ -1,4 +1,4 @@
-import NarutoIcon from '../resources/images/naruto.png';
+import NarutoIcon from '@images/naruto.png';
 
 export const Header = () => {
   return (
