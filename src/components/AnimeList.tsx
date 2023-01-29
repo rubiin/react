@@ -2,16 +2,19 @@ import { useIsFetching } from 'react-query';
 import { AnimeCard } from '@components';
 import { IAnime } from '@types';
 import { useAnimeStore } from '@store';
+import { useTranslation } from 'react-i18next';
 
 export const AnimeList = () => {
   const animes = useAnimeStore(state => state.animes);
   const isLoading = useIsFetching()
+  const { t } = useTranslation();
+
 
   return (
     <div className="container">
       {isLoading ? (
         <div className="empty">
-          <h1>Loading, please wait..</h1>
+          <h1>{t("loading")}</h1>
         </div>
       ) : animes?.length > 0 ? (
         <div className="grid">

@@ -11,9 +11,12 @@
     "start": "serve dist -l 3000"
   },
   "dependencies": {
+    "i18next": "^22.4.9",
+    "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.42.1",
+    "react-i18next": "^12.1.4",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.8.0",
     "redaxios": "^0.5.1",
@@ -25,8 +28,8 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react-swc": "^3.0.1",
-    "eslint": "^8.32.0",
-    "eslint-plugin-react": "^7.32.1",
+    "eslint": "^8.33.0",
+    "eslint-plugin-react": "^7.32.2",
     "eslint_d": "^12.2.1",
     "husky": "^8.0.3",
     "jsdom": "^21.1.0",
@@ -42,5 +45,3 @@
     "vite-plugin-html": "^3.2.0"
   }
 }
-
-
