@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { IAnime, IFetch } from '../types';
+import { IAnime, IFetch } from '@types';
 import { devtools, persist } from 'zustand/middleware';
 
 interface AnimeState {

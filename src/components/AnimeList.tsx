@@ -1,4 +1,4 @@
-import { useIsFetching } from 'react-query';
+import { useIsFetching } from '@tanstack/react-query';
 import { AnimeCard } from '@components';
 import { IAnime } from '@types';
 import { useAnimeStore } from '@store';

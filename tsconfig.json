@@ -18,15 +18,15 @@
     "jsx": "react-jsx",
     "paths": {
       "@components": ["./src/components/index"],
-      "@types": ["./src/types"],
+      "@types": ["./src/types/"],
       "@store": ["./src/stores/index"],
+      "@images": ["./src/resources/images"],
+      "@services": ["./src/services/index"],
       "@utils": ["./src/utils/index"],
       "@hooks": ["./src/hooks/index"],
       "@scss": ["./src/resources/scss"],
-      "@images": ["./src/resources/images"],
-      "@services": ["./src/services"]
     }
   },
-  "include": ["src"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

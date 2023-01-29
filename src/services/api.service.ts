@@ -1,4 +1,4 @@
-import { IAnime, ISearch } from '@types';
+import { ISearch } from '@types';
 import apiClient from './client';
 
 export class ApiService {
