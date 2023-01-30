@@ -22,7 +22,6 @@ specifiers:
   react-hook-form: ^7.43.0
   react-i18next: ^12.1.4
   react-router-dom: ^6.8.0
-  redaxios: ^0.5.1
   rollup-plugin-visualizer: ^5.9.0
   sass: ^1.57.1
   serve: ^14.2.0
@@ -43,7 +42,6 @@ dependencies:
   react-hook-form: 7.43.0_react@18.2.0
   react-i18next: 12.1.4_iakk3dtjhjpukdoa4oua5khgci
   react-router-dom: 6.8.0_biqbaboplfbrettd7655fr4n2y
-  redaxios: 0.5.1
   zustand: 4.3.2_react@18.2.0
 
 devDependencies:
@@ -2796,10 +2794,6 @@ packages:
     dependencies:
       picomatch: 2.3.1
     dev: true
-
-  /redaxios/0.5.1:
-    resolution: {integrity: sha512-FSD2AmfdbkYwl7KDExYQlVvIrFz6Yd83pGfaGjBzM9F6rpq8g652Q4Yq5QD4c+nf4g2AgeElv1y+8ajUPiOYMg==}
-    dev: false
 
   /regenerator-runtime/0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}

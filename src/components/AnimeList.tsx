@@ -11,7 +11,7 @@ export const AnimeList = () => {
 
 
   return (
-    <div className="container">
+    <main className="container">
       {isLoading ? (
         <div className="empty">
           <h1>{t("loading")}</h1>
@@ -28,6 +28,6 @@ export const AnimeList = () => {
           <h1>No anime found</h1>
         </div>
       )}
-    </div>
+    </main>
   );
 };

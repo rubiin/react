@@ -7,6 +7,15 @@
   flex-direction: column;
 }
 
+header{
+
+
+   img{
+    padding: 0 6px 0 6px;
+    height: 60px;
+   }
+}
+
 h1 {
   font-size: var(--big-font-size);
   letter-spacing: 0.9px;

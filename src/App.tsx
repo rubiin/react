@@ -1,15 +1,15 @@
 import '@scss/App.scss';
-import { AnimeList, Header, Search } from './components';
+import { AnimeList, Search } from './components';
 import './i18n/config';
+import MainLayout from './layout/MainLayout';
 
 function App() {
 
   return (
-      <div className="app">
-        <Header />
+      <MainLayout>
         <Search />
         <AnimeList />
-      </div>
+      </MainLayout>
   );
 }
 
