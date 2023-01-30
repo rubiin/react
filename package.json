@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "react-anime",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -11,15 +11,15 @@
     "start": "serve dist -l 3000"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.23.0",
+    "axios": "^1.2.6",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.42.1",
+    "react-hook-form": "^7.43.0",
     "react-i18next": "^12.1.4",
-    "@tanstack/react-query": "^4.23.0",
     "react-router-dom": "^6.8.0",
-    "redaxios": "^0.5.1",
     "zustand": "^4.3.2"
   },
   "devDependencies": {

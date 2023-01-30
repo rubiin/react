@@ -60,10 +60,12 @@ export default defineConfig(({ mode }) => {
         'react',
         'react-router-dom',
         'zustand',
-        '@tanstack/react-query',
-        'redaxios',
         'react-hook-form',
         'react-dom',
+        'i18next-browser-languagedetector',
+        'i18next',
+        '@tanstack/react-query',
+        'axios',
       ],
     };
   }
@@ -103,8 +105,10 @@ export default defineConfig(({ mode }) => {
         'zustand',
         'react-hook-form',
         'react-dom',
+        'i18next-browser-languagedetector',
+        'i18next',
         '@tanstack/react-query',
-        'redaxios',
+        'axios',
       ],
     },
   };
