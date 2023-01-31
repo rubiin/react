@@ -84,6 +84,8 @@ export default defineConfig(({ mode }) => {
         '@scss': path.resolve(__dirname, 'src/resources/scss'),
         '@images': path.resolve(__dirname, 'src/resources/images'),
         '@services': path.resolve(__dirname, 'src/services/index'),
+        '@pages': path.resolve(__dirname, 'src/pages/index'),
+        '@layouts': path.resolve(__dirname, 'src/layouts/index'),
       },
     },
     build: {

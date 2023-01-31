@@ -1,18 +1,34 @@
-.app {
-  padding: 4rem;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
 
 header{
-
-
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .brand{
+    display: flex;
+    align-items: center;
+  }
    img{
     padding: 0 6px 0 6px;
     height: 60px;
+   }
+
+   nav{
+    display: flex;
+    ul{
+      display: flex;
+      list-style: none;
+      li{
+        padding: 0 6px 0 6px;
+        a{
+           color: #fff;
+           font-size: --var(--h3-font-size);
+           text-transform: uppercase;
+
+         }
+      }
+    }
    }
 }
 
@@ -44,7 +60,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 
-  padding: 1.5rem 1.75rem;
+  padding: 1.5rem;
   border-radius: 3rem;
   background: var(--input-color);
   -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
@@ -57,7 +73,6 @@ a:hover {
     font-family: var(--font-raleway);
     font-weight: 500;
     padding-right: 1rem;
-
     outline: none;
     color: var(--input-text-color);
     background: var(--input-color);
@@ -71,8 +86,8 @@ a:hover {
 }
 
 .search img {
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   cursor: pointer;
 }
 
@@ -187,7 +202,7 @@ a:hover {
 }
 
 @media screen and (max-width: 600px) {
-  .app {
+  .layout {
     padding: 4rem 2rem;
   }
 
@@ -207,7 +222,7 @@ a:hover {
 }
 
 @media screen and (max-width: 400px) {
-  .app {
+  .layout {
     padding: 4rem 1rem;
   }
 
