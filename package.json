@@ -11,7 +11,7 @@
     "start": "serve dist -l 3000"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.23.0",
+    "@tanstack/react-query": "^4.24.4",
     "axios": "^1.2.6",
     "i18next": "^22.4.9",
     "i18next-browser-languagedetector": "^7.0.1",
@@ -38,7 +38,7 @@
     "rollup-plugin-visualizer": "^5.9.0",
     "sass": "^1.57.1",
     "serve": "^14.2.0",
-    "typescript": "^4.9.4",
+    "typescript": "^4.9.5",
     "vite": "^4.0.4",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-fonts": "^0.7.0",
