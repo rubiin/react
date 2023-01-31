@@ -9,7 +9,6 @@ export const AnimeList = () => {
   const isLoading = useIsFetching()
   const { t } = useTranslation();
 
-
   return (
     <main className="container">
       {isLoading ? (

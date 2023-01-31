@@ -6,7 +6,6 @@ import { useGetAnimeDetails } from '@services';
 
 export const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  useGetAnimeDetails({ name: searchTerm ?? 'naruto' });
   const { t } = useTranslation();
   const place = t('search');
 

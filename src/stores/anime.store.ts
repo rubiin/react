@@ -9,7 +9,6 @@ interface AnimeState {
 
 export const useAnimeStore = create<AnimeState>()(
   devtools(
-    persist(
       (set, get) => ({
         animes: [],
         setAnime: anime =>
@@ -19,12 +18,11 @@ export const useAnimeStore = create<AnimeState>()(
             }
             return { animes: state.animes.concat(anime) };
           }),
-        getById: (id: number) =>
-          get().animes.find(anime => anime.mal_id === id),
+        getById: (id: string) =>
+          get().animes.find(anime => anime.id === id),
       }),
       {
-        name: 'anime-store',
+        name: 'animeStore',
       },
-    ),
   ),
 );
