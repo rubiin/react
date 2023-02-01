@@ -7,8 +7,6 @@ export class ApiService {
     return activeInstance;
   }
 
-
-
   getAnimeDetails = (opts: ISearch) => {
     const options: ISearch = {
       name: 'naruto',
@@ -22,10 +20,10 @@ export class ApiService {
     );
   };
 
-  getTrendingAnime = (opts: IFetch) => {
+  getTrendingAnime = (opts?: IFetch) => {
     const options: IFetch = {
       page: 1,
-      limit: 6,
+      limit: 8,
       sort: 'desc',
       ...opts,
     };
@@ -33,5 +31,4 @@ export class ApiService {
       `trending?page=${options.page}&perPage=${options.limit}`,
     );
   };
-
 }

@@ -1,35 +1,38 @@
-
-
-header{
+header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  .brand{
+
+  .brand {
     display: flex;
     align-items: center;
   }
-   img{
+
+  img {
     padding: 0 6px 0 6px;
     height: 60px;
-   }
+  }
 
-   nav{
+  nav {
     display: flex;
-    ul{
+
+    ul {
       display: flex;
       list-style: none;
-      li{
-        padding: 0 6px 0 6px;
-        a{
-           color: #fff;
-           font-size: --var(--h3-font-size);
-           text-transform: uppercase;
 
-         }
+      li {
+        padding: 0 6px 0 6px;
+
+        a {
+          color: #fff;
+          font-size: --var(--h3-font-size);
+          text-transform: uppercase;
+
+        }
       }
     }
-   }
+  }
 }
 
 h1 {
@@ -48,6 +51,7 @@ a {
   text-decoration: inherit;
   word-wrap: break-word;
 }
+
 a:hover {
   color: var(--link-color-alt);
 }
@@ -91,6 +95,14 @@ a:hover {
   cursor: pointer;
 }
 
+
+svg {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+  display: inline-block;
+}
+
 .empty {
   width: 100%;
   margin-top: var(--mb-3);
@@ -111,7 +123,7 @@ a:hover {
   margin-top: var(--mb-3);
 }
 
-.flex{
+.flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -124,17 +136,17 @@ a:hover {
   grid-gap: 1rem;
 }
 
-.view-anime{
+.view-anime {
   position: absolute;
-  top: 50%;  /* position the top  edge of the element at the middle of the parent */
-  left: 50%; /* position the left edge of the element at the middle of the parent */
-
-  transform: translate(-50%, -50%);
+  top: 50%;
+  /* position the top  edge of the element at the middle of the parent */
+  left: 50%;
+  /* position the left edge of the element at the middle of the parent */
   color: white;
   display: none;
 }
 
-.rating{
+.rating {
   position: absolute;
   top: 0;
   right: 0;
@@ -177,9 +189,8 @@ a:hover {
 
   div:nth-of-type(3) {
     z-index: 2;
-    background-color: #343739;
     padding: 16px 24px 24px 24px;
-
+    display: none;
 
     position: absolute;
     bottom: 0;
@@ -194,6 +205,7 @@ a:hover {
       font-weight: 500;
       color: #f0f0f0;
     }
+
     h3 {
       margin-top: 5px;
       font-family: 'Roboto Slab', serif;
@@ -214,12 +226,15 @@ a:hover {
   }
 
   div:nth-of-type(3) {
-    background-color: transparent;
+    display: block;
+    background-color: #343739;
   }
+
   div:nth-of-type(1) {
     opacity: 1;
   }
-  .view-anime{
+
+  .view-anime {
     display: block;
   }
 }

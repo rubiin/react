@@ -1,13 +1,14 @@
 import { IAnime } from '@types';
+import { Link } from 'react-router-dom';
 
 export const AnimeCard = (props: { anime: IAnime }) => {
-  const { image, title ,malId,rating} = props.anime;
+  const { image, title ,malId,rating,id} = props.anime;
   return (
+    <Link to={`/anime/${id}`}>
     <div className="anime">
       <div>
-      <h3 className='view-anime'>View anime</h3>
       <span className='rating'>{rating}</span>
-        <h3>{title.english}</h3>
+        <h4 style={{color: "whitesmoke"}}>{title.english}</h4>
       </div>
       <div>
         <img
@@ -21,9 +22,10 @@ export const AnimeCard = (props: { anime: IAnime }) => {
         />
       </div>
       <div>
-        <a href={`https://myanimelist.net/anime/${malId}`}>{`https://myanimelist.net/anime/${malId}`}</a>
-        <h3>{}</h3>
+        <h3>aaa</h3>
+        <a href={`https://myanimelist.net/anime/${malId}`}>View on myanimelist</a>
       </div>
     </div>
+    </Link>
   );
 };

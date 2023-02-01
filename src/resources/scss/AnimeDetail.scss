@@ -1,22 +1,39 @@
-.detail{
+.detail {
   padding-top: 10px;
-  .detail__cover{
-    position: relative;
-  }
-  .gradient{
-    position: absolute;
-    top: 80%;
-    left: 0;
-    background-color: rgba(0, 0, 0,0.55);
-    width: 100%;
-    height: calc(390px - 80%);
-  }
-  img{
-    width: 100%;
-    height: 390px;
-  }
-}
 
-.layout{
-  padding: 0;
+  .detail__cover {
+    position: relative;
+    width: 100%;
+
+    .gradient {
+      position: absolute;
+      top: 80%;
+      left: 0;
+      background: linear-gradient(to bottom, transparent, #232526);
+      width: 100%;
+      height: calc(390px - 80%);
+    }
+
+    img {
+      width: 100%;
+      height: 390px;
+    }
+  }
+
+  .detail__info {
+    display: flex;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: #232526 solid 1px;
+
+    img {
+      width: 200px;
+      height: 300px;
+    }
+
+    h3 {
+      color: #232526;
+    }
+  }
 }

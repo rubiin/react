@@ -13,7 +13,7 @@ export const useGetAnimeDetails = (opts: ISearch) => {
   const setAnime = useAnimeStore(state => state.setAnime);
 
   return useQuery({
-    queryKey: ['searchedAnime', opts.name, opts.limit,opts.page],
+    queryKey: ['searchedAnime', opts.name, opts.limit, opts.page],
     queryFn: async () => {
       const response = await animeService.getAnimeDetails(opts);
       return response.data.results;
@@ -25,7 +25,7 @@ export const useGetAnimeDetails = (opts: ISearch) => {
   });
 };
 
-export const useGetTrendingAnime = (opts: IFetch) => {
+export const useGetTrendingAnime = (opts?: IFetch) => {
   const animeService = ApiService.createInstance();
   const setAnime = useAnimeStore(state => state.setAnime);
 
@@ -33,7 +33,7 @@ export const useGetTrendingAnime = (opts: IFetch) => {
     queryKey: ['trendingAnime'],
     queryFn: async () => {
       const response = await animeService.getTrendingAnime(opts);
-      return response.data.results
+      return response.data.results;
     },
     onSuccess: data => {
       setAnime(data);
@@ -41,4 +41,3 @@ export const useGetTrendingAnime = (opts: IFetch) => {
     retry: false,
   });
 };
-

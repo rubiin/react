@@ -6,8 +6,8 @@ export const Home = () => {
   useGetTrendingAnime()
   return (
     <>
-    <Search/>
-    <AnimeList/>
+      <Search />
+      <AnimeList />
     </>
   )
 }

@@ -19,7 +19,6 @@ export interface IAnime {
   type: string;
 }
 
-
 export interface IFetch {
   limit?: number;
   page?: number;
