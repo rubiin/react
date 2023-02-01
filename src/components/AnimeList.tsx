@@ -3,11 +3,13 @@ import { AnimeCard } from '@components';
 import { IAnime } from '@types';
 import { useAnimeStore } from '@store';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 export const AnimeList = () => {
   const animes = useAnimeStore(state => state.animes);
   const isLoading = useIsFetching()
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
 
   return (
@@ -49,7 +51,9 @@ export const AnimeList = () => {
       ) : animes?.length > 0 ? (
         <div className="grid">
           {animes.map((anime: IAnime, index: number) => (
-            <AnimeCard key={index} anime={anime} />
+            <AnimeCard key={index} anime={anime}
+            onClick={() => navigate(`/anime/${anime.id}`)}
+            />
           ))
           }
         </div>

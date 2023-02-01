@@ -9,6 +9,7 @@ export interface IAnime {
   id: string;
   malId: number;
   title: Title;
+  cover: string;
   image: string;
   rating: number;
   color: string;
