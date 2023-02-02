@@ -1,11 +1,9 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { Layout } from '@layouts';
-import { AnimeDetail, Home } from '@pages';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import '@scss/index.scss';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import React from 'react';
 
 const router = createBrowserRouter([
   {

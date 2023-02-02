@@ -1,6 +1,6 @@
+import { IAnime } from '@types';
 import { create } from 'zustand';
-import { IAnime, IFetch } from '@types';
-import { devtools, persist } from 'zustand/middleware';
+import { devtools } from 'zustand/middleware';
 
 interface AnimeState {
   animes: IAnime[];

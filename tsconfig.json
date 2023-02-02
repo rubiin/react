@@ -24,7 +24,7 @@
       "@services": ["./src/services/index"],
       "@utils": ["./src/utils/index"],
       "@hooks": ["./src/hooks/index"],
-      "@pages": ["./src/pages/index"],
+      "@views": ["src/views/index"],
       "@layouts": ["./src/layouts/index"],
       "@scss": ["./src/resources/scss"],
     }
