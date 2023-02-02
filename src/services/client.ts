@@ -1,4 +1,3 @@
-import axios from 'axios';
 const API_URL = 'https://api.consumet.org/meta/anilist/';
 
 const axiosInstance = axios.create({

@@ -1,4 +1,3 @@
-import { AnimeList, Search } from '@components';
 import { useGetTrendingAnime } from '@services';
 
 export const Home = () => {

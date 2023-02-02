@@ -1,4 +1,3 @@
-import { useQuery } from '@tanstack/react-query';
 import { IFetch, ISearch } from '@types';
 import { useAnimeStore } from '@store';
 import { ApiService } from '@services';

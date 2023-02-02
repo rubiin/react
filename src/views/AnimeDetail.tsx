@@ -1,6 +1,5 @@
 import '@scss/AnimeDetail.scss'
 import { useAnimeStore } from '@store'
-import { useParams } from 'react-router-dom';
 
 export const AnimeDetail = (props: any) => {
   const { id } = useParams();

@@ -1,5 +1,3 @@
-import { Header } from "@components"
-import { Outlet, useLocation } from "react-router-dom"
 import "@scss/App.scss"
 
 export const Layout = () => {

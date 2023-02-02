@@ -1,5 +1,4 @@
 import { IAnime } from '@types';
-import { Link } from 'react-router-dom';
 
 export const AnimeCard = (props: { anime: IAnime, onClick: any }) => {
   const { image, title ,malId,rating,id,genres} = props.anime;

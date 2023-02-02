@@ -1,5 +1,4 @@
 import NarutoIcon from '@images/naruto.png';
-import { Link } from 'react-router-dom';
 
 export const Header = () => {
   return (

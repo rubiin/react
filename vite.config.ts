@@ -2,10 +2,14 @@ import { defineConfig, loadEnv } from 'vite';
 import { VitePluginFonts } from 'vite-plugin-fonts';
 import ViteVisualizer from 'rollup-plugin-visualizer';
 import strip from '@rollup/plugin-strip';
-import path from 'node:path';
+import tsconfigPaths from 'vite-tsconfig-paths'
 import viteCompression from 'vite-plugin-compression';
 import react from '@vitejs/plugin-react-swc';
 import { createHtmlPlugin } from 'vite-plugin-html';
+import svgr from 'vite-plugin-svgr'
+import AutoImport from 'unplugin-auto-import/vite'
+import { imagetools } from 'vite-imagetools'
+import path from 'node:path';
 
 export default defineConfig(({ mode }) => {
   const isDev = mode === 'dev';
@@ -16,6 +20,9 @@ export default defineConfig(({ mode }) => {
 
   const plugin = [
     react(),
+    svgr({
+      exportAsDefault: true,
+    }),
     strip(),
     VitePluginFonts({
       google: {
@@ -24,13 +31,40 @@ export default defineConfig(({ mode }) => {
     }),
     viteCompression({
       algorithm: 'brotliCompress',
+      threshold: 200,
+      verbose: true,
     }),
+    tsconfigPaths({
+      loose: true,
+    }),
+    imagetools(),
     createHtmlPlugin({
       minify: true,
       inject: {
         data: {
           title: process.env.VITE_APP_TITLE,
         },
+      },
+    }),
+    AutoImport({
+      include: [
+        /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+      ],
+      imports: ['react', 'react-router-dom', 'react-i18next',
+    {
+      'axios': [
+        // default imports
+        ['default', 'axios'], // import { default as axios } from 'axios',
+      ],
+      '@tanstack/react-query': [
+        'useQuery','useMutation','useIsFetching'
+      ]
+    }
+    ],
+      dts: './src/auto-imports.d.ts',
+      dirs: ['src/layouts', 'src/views', 'src/components'],
+      eslintrc: {
+        enabled: true
       },
     }),
   ];
@@ -76,16 +110,7 @@ export default defineConfig(({ mode }) => {
     },
     resolve: {
       alias: {
-        '@components': path.resolve(__dirname, '/src/components/index'),
-        '@types': path.resolve(__dirname, '/src/types'),
-        '@store': path.resolve(__dirname, '/src/stores/index'),
-        '@utils': path.resolve(__dirname, '/src/utils/index'),
-        '@hooks': path.resolve(__dirname, '/src/hooks'),
-        '@scss': path.resolve(__dirname, 'src/resources/scss'),
         '@images': path.resolve(__dirname, 'src/resources/images'),
-        '@services': path.resolve(__dirname, 'src/services/index'),
-        '@pages': path.resolve(__dirname, 'src/pages/index'),
-        '@layouts': path.resolve(__dirname, 'src/layouts/index'),
       },
     },
     build: {
